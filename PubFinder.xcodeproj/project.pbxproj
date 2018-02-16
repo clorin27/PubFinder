@@ -12,6 +12,11 @@
 		1E20242B2036752000EC65F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2024292036752000EC65F0 /* Main.storyboard */; };
 		1E20242D2036752000EC65F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E20242C2036752000EC65F0 /* Assets.xcassets */; };
 		1E2024302036752000EC65F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E20242E2036752000EC65F0 /* LaunchScreen.storyboard */; };
+		1E202438203675CB00EC65F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E202437203675CB00EC65F0 /* HomeViewController.swift */; };
+		1E20243A203675D100EC65F0 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E202439203675D100EC65F0 /* SearchTableViewCell.swift */; };
+		1E20243C203675D800EC65F0 /* IrishPubItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20243B203675D800EC65F0 /* IrishPubItem.swift */; };
+		1E20243E203675DD00EC65F0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20243D203675DD00EC65F0 /* SearchViewController.swift */; };
+		1E202440203675F200EC65F0 /* IrishPubFinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20243F203675F100EC65F0 /* IrishPubFinderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		1E20242C2036752000EC65F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E20242F2036752000EC65F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E2024312036752000EC65F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E202437203675CB00EC65F0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1E202439203675D100EC65F0 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		1E20243B203675D800EC65F0 /* IrishPubItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IrishPubItem.swift; sourceTree = "<group>"; };
+		1E20243D203675DD00EC65F0 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1E20243F203675F100EC65F0 /* IrishPubFinderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IrishPubFinderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,11 @@
 			children = (
 				1E2024252036752000EC65F0 /* AppDelegate.swift */,
 				1E2024272036752000EC65F0 /* ViewController.swift */,
+				1E202437203675CB00EC65F0 /* HomeViewController.swift */,
+				1E20243D203675DD00EC65F0 /* SearchViewController.swift */,
+				1E20243F203675F100EC65F0 /* IrishPubFinderViewModel.swift */,
+				1E202439203675D100EC65F0 /* SearchTableViewCell.swift */,
+				1E20243B203675D800EC65F0 /* IrishPubItem.swift */,
 				1E2024292036752000EC65F0 /* Main.storyboard */,
 				1E20242C2036752000EC65F0 /* Assets.xcassets */,
 				1E20242E2036752000EC65F0 /* LaunchScreen.storyboard */,
@@ -136,8 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E20243E203675DD00EC65F0 /* SearchViewController.swift in Sources */,
 				1E2024282036752000EC65F0 /* ViewController.swift in Sources */,
+				1E20243A203675D100EC65F0 /* SearchTableViewCell.swift in Sources */,
 				1E2024262036752000EC65F0 /* AppDelegate.swift in Sources */,
+				1E202438203675CB00EC65F0 /* HomeViewController.swift in Sources */,
+				1E202440203675F200EC65F0 /* IrishPubFinderViewModel.swift in Sources */,
+				1E20243C203675D800EC65F0 /* IrishPubItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
