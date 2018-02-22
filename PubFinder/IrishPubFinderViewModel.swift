@@ -15,11 +15,21 @@ class IrishPubViewModel {
     
     static let fourSquareVersion = "20140613"
     
+    static let FetchComplete =
+    "FetchComplete"
+    
     var irishPubs = [IrishPubItem]()
     
-    func findIrishPubs(tableView: UITableView) {
+    init() {
+        findIrishPubs()
+    }
+    
+    func findIrishPubs() {
         
         let urlString = "https://api.foursquare.com/v2/search/recommendations?ll=\(33.753746),-\(84.386330)&categoryId=52e81612bcbc57f1066b7a06&limit=15&client_id=\(IrishPubViewModel.client_id)&client_secret=\(IrishPubViewModel.client_secret)&v=\(IrishPubViewModel.fourSquareVersion)"
+        
+        print("URL STRING = \(urlString)")
+
         
         guard let url = URL (string:urlString) else {
             return
@@ -54,19 +64,37 @@ class IrishPubViewModel {
                 for item in resultsArray {
                     
                     var title =  ""
+                    var priceTier = ""
+                    var url = ""
                     
-                    if let venueDictionary = item["venue"] as? [String: Any]?, let name = venueDictionary?["name"] as? String {
-                        title = name
+                    
+                    if let venueDictionary = item["venue"] as? [String: Any]? {
+                        
+                        if let name = venueDictionary?["name"]as? String {
+                           title = name
+                        }
+                        
+                        if let priceDictionary = venueDictionary?["price"] as? [String: Any]?, let messageString = priceDictionary?["message"] as? String {
+                            priceTier = messageString
+                        }
+                        
+                        if let urlString = venueDictionary? ["url"]as? String {
+                            url = urlString
+                        }
+                        
+    
+                        
                     }
                     
-                    let item = IrishPubItem(title: title , distance: 0, rating: "")
+                    let item = IrishPubItem(title: title , distance: 0, rating: "", priceTier: priceTier, url: url)
                     self.irishPubs.append(item)
                     
                     
                 }
                 
                 DispatchQueue.main.async {
-                    tableView.reloadData()
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: IrishPubViewModel.FetchComplete), object: nil)
+                    
                 }
             
                 print("json data = \(resultsArray)")

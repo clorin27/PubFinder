@@ -18,8 +18,12 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel.findIrishPubs(tableView: irishPubTableVIew)
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: IrishPubViewModel.FetchComplete), object: nil, queue: nil) { [weak self] _ in  self?.refreshTableView()
+        }
+    }
+    
+    func refreshTableView() {
+        irishPubTableVIew.reloadData()
     }
 
 }
@@ -36,11 +40,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let irishPubItem = viewModel.irishPubs[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! SearchTableViewCell
         cell.titleLabel.text = irishPubItem.title
+        cell.priceLabel.text = irishPubItem.priceTier
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+       let irishPubItem = viewModel.irishPubs[indexPath.row]
+        
+      let detailVC = SearchDetailViewController()
+      detailVC.urlString = irishPubItem.url
+        
+        navigationController?.pushViewController(detailVC, animated: false)
     }
     
 }

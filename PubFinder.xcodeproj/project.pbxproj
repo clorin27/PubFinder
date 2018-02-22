@@ -17,6 +17,7 @@
 		1E20243C203675D800EC65F0 /* IrishPubItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20243B203675D800EC65F0 /* IrishPubItem.swift */; };
 		1E20243E203675DD00EC65F0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20243D203675DD00EC65F0 /* SearchViewController.swift */; };
 		1E202440203675F200EC65F0 /* IrishPubFinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20243F203675F100EC65F0 /* IrishPubFinderViewModel.swift */; };
+		1E57AEE8203A574E00C34035 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E57AEE7203A574E00C34035 /* SearchDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1E20243B203675D800EC65F0 /* IrishPubItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IrishPubItem.swift; sourceTree = "<group>"; };
 		1E20243D203675DD00EC65F0 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1E20243F203675F100EC65F0 /* IrishPubFinderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IrishPubFinderViewModel.swift; sourceTree = "<group>"; };
+		1E57AEE7203A574E00C34035 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				1E202439203675D100EC65F0 /* SearchTableViewCell.swift */,
 				1E20243B203675D800EC65F0 /* IrishPubItem.swift */,
 				1E2024292036752000EC65F0 /* Main.storyboard */,
+				1E57AEE7203A574E00C34035 /* SearchDetailViewController.swift */,
 				1E20242C2036752000EC65F0 /* Assets.xcassets */,
 				1E20242E2036752000EC65F0 /* LaunchScreen.storyboard */,
 				1E2024312036752000EC65F0 /* Info.plist */,
@@ -157,6 +160,7 @@
 				1E2024262036752000EC65F0 /* AppDelegate.swift in Sources */,
 				1E202438203675CB00EC65F0 /* HomeViewController.swift in Sources */,
 				1E202440203675F200EC65F0 /* IrishPubFinderViewModel.swift in Sources */,
+				1E57AEE8203A574E00C34035 /* SearchDetailViewController.swift in Sources */,
 				1E20243C203675D800EC65F0 /* IrishPubItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

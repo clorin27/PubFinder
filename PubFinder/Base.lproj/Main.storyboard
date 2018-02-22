@@ -29,7 +29,7 @@
         <!--Home View Controller-->
         <scene sceneID="xLe-VI-tg3">
             <objects>
-                <viewController id="kni-19-Il8" customClass="HomeViewController" customModule="IrishPubFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kni-19-Il8" customClass="HomeViewController" customModule="PubFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hCu-be-dVi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
         <!--Search View Controller-->
         <scene sceneID="xyj-Z6-vGr">
             <objects>
-                <viewController id="hp0-uJ-aLX" customClass="SearchViewController" customModule="IrishPubFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hp0-uJ-aLX" customClass="SearchViewController" customModule="PubFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wY5-jd-1gw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="0xH-ol-ZAe" customClass="SearchTableViewCell" customModule="IrishPubFinder" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="0xH-ol-ZAe" customClass="SearchTableViewCell" customModule="PubFinder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0xH-ol-ZAe" id="Svm-Fn-olv">
@@ -82,13 +82,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSi-Iu-53Q">
+                                                    <rect key="frame" x="318" y="5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="nr6-Ex-QZi" firstAttribute="top" secondItem="Svm-Fn-olv" secondAttribute="top" constant="5" id="2Vz-Nh-rDI"/>
+                                                <constraint firstAttribute="trailing" secondItem="CSi-Iu-53Q" secondAttribute="trailing" constant="15" id="Lbx-ar-qDT"/>
+                                                <constraint firstItem="CSi-Iu-53Q" firstAttribute="centerY" secondItem="nr6-Ex-QZi" secondAttribute="centerY" id="aW6-HW-SUL"/>
                                                 <constraint firstItem="nr6-Ex-QZi" firstAttribute="leading" secondItem="Svm-Fn-olv" secondAttribute="leading" constant="10" id="gCW-yw-oei"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="priceLabel" destination="CSi-Iu-53Q" id="WlT-X3-qNk"/>
                                             <outlet property="titleLabel" destination="nr6-Ex-QZi" id="67v-MC-Sch"/>
                                         </connections>
                                     </tableViewCell>
