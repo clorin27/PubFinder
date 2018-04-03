@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class IrishPubViewModel {
     
@@ -20,13 +21,9 @@ class IrishPubViewModel {
     
     var irishPubs = [IrishPubItem]()
     
-    init() {
-        findIrishPubs()
-    }
-    
-    func findIrishPubs() {
+    func findIrishPubs(longitude: CLLocationDegrees, latitude: CLLocationDegrees) {
         
-        let urlString = "https://api.foursquare.com/v2/search/recommendations?ll=\(33.753746),-\(84.386330)&categoryId=52e81612bcbc57f1066b7a06&limit=15&client_id=\(IrishPubViewModel.client_id)&client_secret=\(IrishPubViewModel.client_secret)&v=\(IrishPubViewModel.fourSquareVersion)"
+        let urlString = "https://api.foursquare.com/v2/search/recommendations?ll=\(latitude),\(longitude)&categoryId=52e81612bcbc57f1066b7a06&limit=15&client_id=\(IrishPubViewModel.client_id)&client_secret=\(IrishPubViewModel.client_secret)&v=\(IrishPubViewModel.fourSquareVersion)"
         
         print("URL STRING = \(urlString)")
 

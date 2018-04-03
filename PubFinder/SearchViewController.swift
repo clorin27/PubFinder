@@ -6,12 +6,13 @@
 //
 
 import UIKit
-
+import CoreLocation
 
 
 class SearchViewController: UIViewController {
     
     let viewModel = IrishPubViewModel()
+    var currentLocation: CLLocationCoordinate2D?
     
     @IBOutlet weak var irishPubTableVIew: UITableView!
     
@@ -19,7 +20,13 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: IrishPubViewModel.FetchComplete), object: nil, queue: nil) { [weak self] _ in  self?.refreshTableView()
+            
         }
+        
+        guard let currentLocation = currentLocation else { return }
+        
+        viewModel.findIrishPubs(longitude: currentLocation.longitude, latitude: currentLocation.latitude)
+        
     }
     
     func refreshTableView() {

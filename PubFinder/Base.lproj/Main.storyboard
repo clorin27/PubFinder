@@ -52,10 +52,13 @@
                         <viewLayoutGuide key="safeArea" id="CC8-1k-kzN"/>
                     </view>
                     <navigationItem key="navigationItem" id="OKV-1b-4q0"/>
+                    <connections>
+                        <outlet property="irishPubSearchButton" destination="Bkb-aG-3q9" id="d1e-k4-ILF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHw-Cj-Hxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="260"/>
+            <point key="canvasLocation" x="525.60000000000002" y="259.52023988005999"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="xyj-Z6-vGr">

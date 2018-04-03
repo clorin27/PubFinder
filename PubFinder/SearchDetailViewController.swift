@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class SearchDetailViewController: UIViewController, WKNavigationDelegate {
+class SearchDetailViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     var webView: WKWebView?
     var urlString: String?
@@ -17,7 +17,7 @@ class SearchDetailViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // make a loading indicator and tell it to start animating
         // make an activityindicator spinner
         // tell it to start animating
         
@@ -46,6 +46,8 @@ class SearchDetailViewController: UIViewController, WKNavigationDelegate {
         //succes
         
         // activity spinner to stop animating
+        
+        // tell loading indicator to stop animating 
         
     }
     
