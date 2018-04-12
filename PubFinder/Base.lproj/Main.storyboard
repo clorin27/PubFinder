@@ -34,9 +34,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stock-vector-coaster-for-beer-with-hand-drawn-lettering-beer-vintage-drawing-for-bar-pub-and-beer-themes-609821057" translatesAutoresizingMaskIntoConstraints="NO" id="dkU-z9-bSY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkb-aG-3q9">
-                                <rect key="frame" x="164" y="350.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="103.5" y="350" width="167" height="30"/>
+                                <state key="normal" title="Find Irish Pubs Near You"/>
                                 <connections>
                                     <action selector="findIrishPubTapped:" destination="kni-19-Il8" eventType="touchUpInside" id="DjY-3G-dWv"/>
                                     <segue destination="hp0-uJ-aLX" kind="show" identifier="showSearch" id="Evh-Ox-CTz"/>
@@ -45,14 +48,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CC8-1k-kzN" firstAttribute="trailing" secondItem="dkU-z9-bSY" secondAttribute="trailing" id="CFt-Sz-h6N"/>
                             <constraint firstItem="Bkb-aG-3q9" firstAttribute="centerY" secondItem="CC8-1k-kzN" secondAttribute="centerY" id="CjJ-yG-OcI"/>
+                            <constraint firstItem="dkU-z9-bSY" firstAttribute="leading" secondItem="CC8-1k-kzN" secondAttribute="leading" id="Fsc-JB-xSB"/>
+                            <constraint firstItem="CC8-1k-kzN" firstAttribute="bottom" secondItem="dkU-z9-bSY" secondAttribute="bottom" id="IDy-z4-H2L"/>
                             <constraint firstItem="Bkb-aG-3q9" firstAttribute="centerX" secondItem="CC8-1k-kzN" secondAttribute="centerX" id="JJC-76-cJz"/>
                             <constraint firstItem="Bkb-aG-3q9" firstAttribute="centerX" secondItem="CC8-1k-kzN" secondAttribute="centerX" id="KK5-Dl-8fY"/>
+                            <constraint firstItem="dkU-z9-bSY" firstAttribute="top" secondItem="CC8-1k-kzN" secondAttribute="top" id="MtM-js-2CR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CC8-1k-kzN"/>
                     </view>
                     <navigationItem key="navigationItem" id="OKV-1b-4q0"/>
                     <connections>
+                        <outlet property="irishPubImageView" destination="dkU-z9-bSY" id="9GM-bg-By7"/>
                         <outlet property="irishPubSearchButton" destination="Bkb-aG-3q9" id="d1e-k4-ILF"/>
                     </connections>
                 </viewController>
@@ -71,6 +79,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nrU-eD-kv2">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="rbM-H1-kZb">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="0xH-ol-ZAe" customClass="SearchTableViewCell" customModule="PubFinder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -129,4 +141,7 @@
             <point key="canvasLocation" x="1246" y="253"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stock-vector-coaster-for-beer-with-hand-drawn-lettering-beer-vintage-drawing-for-bar-pub-and-beer-themes-609821057" width="1500" height="1101"/>
+    </resources>
 </document>

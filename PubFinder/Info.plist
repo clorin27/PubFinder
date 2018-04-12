@@ -5,11 +5,9 @@
 	<key>NS</key>
 	<string></string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Irish Pub Finder needs your location to find your nearest Pub</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Will you allow this app to always know your location?</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Do you allow this app to know your current location?</string>
+	<string>Do you allow this app to know your current location?</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Will you allow this app to always know your location?</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

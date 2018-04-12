@@ -13,6 +13,7 @@ class SearchDetailViewController: UIViewController, WKNavigationDelegate, WKUIDe
     
     var webView: WKWebView?
     var urlString: String?
+    var pubFinderActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,14 @@ class SearchDetailViewController: UIViewController, WKNavigationDelegate, WKUIDe
         // make a loading indicator and tell it to start animating
         // make an activityindicator spinner
         // tell it to start animating
+        
+        pubFinderActivityIndicator.center = view.center
+        pubFinderActivityIndicator.frame = view.bounds
+        pubFinderActivityIndicator.hidesWhenStopped = false
+        pubFinderActivityIndicator.startAnimating()
+        view.addSubview(pubFinderActivityIndicator)
+        
+        
         
         guard let detailURLString = urlString else {
             return
@@ -47,7 +56,12 @@ class SearchDetailViewController: UIViewController, WKNavigationDelegate, WKUIDe
         
         // activity spinner to stop animating
         
-        // tell loading indicator to stop animating 
+        // tell loading indicator to stop animating
+        
+        pubFinderActivityIndicator.stopAnimating()
+        pubFinderActivityIndicator.removeFromSuperview()
+        
+        
         
     }
     

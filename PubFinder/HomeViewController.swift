@@ -13,8 +13,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var currentLocation:CLLocationCoordinate2D!
     var flag = true
+    let imageURL = "https://www.123rf.com/stock-photo/irish_pub.html?sti=lg3lj6onhx47sqbt3o|&mediapopup=33129942"
 
     @IBOutlet weak var irishPubSearchButton: UIButton!
+    @IBOutlet weak var irishPubImageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -22,6 +24,9 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
 
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+        
+        self.irishPubImageView.image = UIImage(named: imageURL)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +34,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         
         locationManager.requestWhenInUseAuthorization()
         flag = true
+      
     }
 
     @IBAction func findIrishPubTapped(_ sender: Any) {
@@ -87,6 +93,48 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
 
+    
+    
+}
+
+
+
+
+
+
+
+
+
+/*func loadImage(with address: String) {
+    
+    // Perform on background thread
+    DispatchQueue.global().async {
+    
+    // Create url from string address
+    guard let url = URL(string: address) else {
+    return
+    }
+    
+    // Create data from url (You can handle exeption with try-catch)
+    guard let data = try? Data(contentsOf: url) else {
+    return
+    }
+    
+    // Create image from data
+    guard let image = UIImage(data: data) else {
+    return
+    }
+    
+    // Perform on UI thread
+    DispatchQueue.main.async {
+    let imageView = UIImageView(image: image)
+        
+    /* Do some stuff with your imageView */
+    }
+    }
+    } /*
+    
+
     /*
     // MARK: - Navigation
 
@@ -97,4 +145,4 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     */
 
-}
+ */*/
